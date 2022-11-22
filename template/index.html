@@ -1,0 +1,85 @@
+<!-- <html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Transaksi </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body></br></br></br></br></br>
+  <div align="center">
+    <div align="center" class="border">
+      <div class="header">
+        <h1 class="word">Transaksi</h1>
+      </div></br></br></br>
+      <h2 class="word">
+        <form action="{{ url_for('index') }}" method="post">
+          <div class="msg">{{ msg }}</div>
+          <input id="sender" name="sender" type="text" placeholder="sender" class="textbox" /></br></br>
+          <input id="recipient" name="recipient" type="text" placeholder="Enter Your recipient"
+            class="textbox" /></br></br></br>
+          <input id="amount" name="amount" type="text" placeholder="Enter Your amount" class="textbox" /></br></br></br>
+          <input type="submit" class="btn" value="Kirim"></br></br>
+        </form>
+      </h2>
+      <p class="bottom">Don't have an account? <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p>
+    </div>
+  </div>
+</body>
+
+</html> -->
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <section class="bg-gray-900 h-screen flex items-center">
+    <div class="container md:px-20 px-10 md:py-24 py-12 mx-auto lg:py-32">
+      <div class="lg:flex">
+        <div class="lg:w-1/2">
+          <h1 class="text-gray-300 md:text-xl">Selamat Datang</h1>
+          <h1 class="mt-4 text-3xl font-medium capitalize md:text-4xl lg:text-6xl text-white">
+            Transaksi ke Penerima
+          </h1>
+        </div>
+
+        <div class="mt-8 lg:w-1/2 lg:mt-0 flex items-center">
+          <form action="{{ url_for('index') }}" method="post" class="w-full lg:max-w-xl">
+            <div class="msg">{{ msg }}</div>
+            <div class="relative flex items-center">
+              <div class="w-full">
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Pengirim</label>
+                <input id="sender" name="sender" type="text" placeholder="Masukan Nama Pengirim"
+                  class="block w-full px-10 py-3 border rounded-md bg-gray-900 text-gray-300 border-gray-600" />
+
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Penerima</label>
+                <input id="recipient" name="recipient" type="text" placeholder="Masukkan Nama Penerima"
+                  class="block w-full px-10 py-3 border rounded-md bg-gray-900 text-gray-300 border-gray-600" />
+
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nominal Transaksi</label>
+                <input id="amount" name="amount" type="text" placeholder="Masukan Nominal Transaksi"
+                  class="block w-full px-10 py-3 border rounded-md bg-gray-900 text-gray-300 border-gray-600" />
+                <!-- <input type="submit"
+                  class="w-full text-center px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-md md:w-1/2 hover:bg-blue-800"
+                  value="Kirim"> -->
+              </div>
+            </div>
+            <div class="mt-8 md:flex md:items-center">
+              <input type="submit"
+                class="w-full text-center px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-md md:w-1/2 hover:bg-blue-800"
+                value="Kirim">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
